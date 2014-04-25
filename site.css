@@ -184,3 +184,8 @@
 		left: 50%;
 		margin: -10px 0px 0px -400px;		
 	}
+
+	img.cellimage
+	{
+		float: left;
+	}
