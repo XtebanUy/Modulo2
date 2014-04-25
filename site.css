@@ -1,23 +1,21 @@
-	html { height: 100%; }
-	body {
-		height:100%;
-		min-height: 100%;
+	html, body {
+	  height: 100%;
 	}
 	header {
 		height: 100px;
-		background: #70bf32;
-		background: -webkit-linear-gradient(#a1e048, #6a942f);
-		background: -moz-linear-gradient(#a1e048, #6a942f);
-		background: -ms-linear-gradient(#a1e048, #6a942f);
-			background: -o-linear-gradient(#a1e048, #6a942f);
-			background: linear-gradient(#a1e048, #6a942f);
+		background: #464B94;
+		background: -webkit-linear-gradient(#9194C0, #53589A);
+		background: -moz-linear-gradient(#9194C0, #53589A);
+		background: -ms-linear-gradient(#9194C0, #53589A);
+		background: -o-linear-gradient(#9194C0, #53589A);
+		background: linear-gradient(#9194C0, #53589A);
 	}
 
 	ul.navigation-links{
 		height: 20px; 
 		padding: 10px;
 		margin: 0px;
-		background: #0000FF;
+		background: #775B72;
 	}
 	ul.navigation-links > li{
 		position: relative;
@@ -35,7 +33,7 @@
 	ul.navigation-links-vertical
 	{
 		display: none;
-		background: #0000FF;
+		background: #775B72;
 		position: absolute;
 		top: 40px;
 		left: 0px;
@@ -54,23 +52,54 @@
 	{
 		display: block;
 	}
-	footer {
-		height:50px;
-		width:100%;
-		background: #70bf32;
-		background: -webkit-linear-gradient(#a1e048, #6a942f);
-		background: -moz-linear-gradient(#a1e048, #6a942f);
-		background: -ms-linear-gradient(#a1e048, #6a942f);
-		background: -o-linear-gradient(#a1e048, #6a942f);
-		background: linear-gradient(#a1e048, #6a942f);
+
+	.page-wrap:before {
+	  /* .push must be the same height as footer */
+	  height: 140px; 
 	}
-	article
-	{
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		padding: 70px 20px;
-		min-height: 50%;
+	footer.site-footer, .page-wrap:after {
+	  /* .push must be the same height as footer */
+	  height: 50px; 
+	}
+	footer.site-footer {
+	 background: #464B94;
+		background: -webkit-linear-gradient(#9194C0, #53589A);
+		background: -moz-linear-gradient(#9194C0, #53589A);
+		background: -ms-linear-gradient(#9194C0, #53589A);
+		background: -o-linear-gradient(#9194C0, #53589A);
+		background: linear-gradient(#9194C0, #53589A);
+		text-align: center;
+		position: relative;
+	}
+
+	article.page-wrap {
+	  min-height: 100%;
+	  /* equal to footer height */
+
+	  min-width: 800px;
+	  width: 90%;
+	  margin-left: auto;
+	  margin-right: auto;
+	  margin-bottom: -50px; 
+	  margin-top: -140px;
+	}
+
+	article.page-wrap:after, article.page-wrap:before {
+	  content: "";
+	  display: block;
+	}
+
+	article.page-wrap:after {
+	  background: url(ventas-celulares.jpg);
+	  opacity: 0.3;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  bottom: 0;
+	  right: 0;
+	  position: absolute;
+	  z-index: -1;   
 	}
 
 	div.site-logo{
@@ -94,8 +123,7 @@
 		width: 800px;
 		height 100px;
 		margin: 0px auto;
-		text-align: center;
-		font-size: 20px;
+		font-size: 30px;
 		vertical-align: middle;
 	}
 	.menu-item
@@ -115,8 +143,44 @@
 		font-weight: bold;
 		color: black;
 	}
+	h2{
+		font-size: 18px;
+		margin: 10px;
+		font-weight: bold;
+		color: black;
+	}
+	h3{
+		font-size: 16px;
+		margin: 10px;
+		font-weight: bold;
+		color: black;
+	}
 	img.cell-image
 	{
 		float: right;
 		margin: 10px;
+	}
+	div.field-container
+	{
+		position: relative;
+	}
+	label.label-field
+	{
+		vertical-align: top;
+		display: block;
+		width: 80px;
+	}
+	textarea.mensaje
+	{
+		width: 500px;
+		height: 250px;
+	}
+	div.contact
+	{
+		width: 800px;
+		height: 30px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -10px 0px 0px -400px;		
 	}
