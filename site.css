@@ -190,3 +190,10 @@
 		float: left;
 		margin: 10px;
 	}
+	div.form-container
+	{
+		width: 800px;
+		margin-top: 10px;
+		margin-left: auto;
+	  	margin-right: auto;
+	}
