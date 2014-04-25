@@ -1,0 +1,90 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Celulares</title>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="site.css">
+        <script type="text/javascript" src="jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="jquery.validate.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function()
+                {
+                    $("#emailform").validate({
+                        rules: {
+                            asunto: "required",
+                            mensaje: "required"
+                        },
+                        messages: {
+                            asunto: "ASUNTO ES REQUERIDO",
+                            mensaje: "MENSAJE ES REQUERIDO"
+                        },
+                        submitHandler: function(form) {
+                            document.location.href = "mailto:esteban.soba@gmail.com?subject="+encodeURIComponent($("#asunto").val())+"&body="+$("#mensaje").val();
+                        }
+                    });
+
+                }
+            )
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="site-header-container">
+            <div class="site-logo">
+
+            </div>
+            <div class="site-description">
+                Celulares
+            </div>
+            <div>
+        </header>
+        <nav>
+                <ul class="navigation-links">
+                    <li>
+                        <a class="menu-item" href="inicio.html">Inicio</a>
+                    </li>
+                    <li>
+                        <span class="menu-item">Objetos</span>
+                        <ul class="navigation-links-vertical">
+                            <li>
+                                <a class="menu-item" href="objeto1.html">Objeto 1</a>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="objeto1.html">Objeto 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        <article class="page-wrap">
+            <section>
+                <form id="emailform" novalidate="novalidate">
+                    <fieldset>
+                        <div class="field-container">
+                            <label for="asunto" class="label-field">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" placeholder="ingrese su asunto"/>
+                            <label class="error" for="asunto"></label>
+                        </div>
+                        <div class="field-container">
+                            <label for="mensaje" class="label-field">Mensaje</label>
+                            <textarea type="text" id="mensaje" name="mensaje" class="mensaje" placeholder="ingrese su mensaje"></textarea>
+                            <label class="error" for="mensaje"></label>
+                        </div>
+                        <div>
+                            <button type="submit" id="enviar">Enviar</button>
+                        </div>
+                    </fieldset>
+                </form> 
+            </section>
+        </article>
+        <footer class="site-footer">
+            <div class="contact">
+                Contactese con Ricardo Soba ingrese <a href="contacto.html">aquí</a>
+            <div>
+        </footer>
+    </body>
+    </html>
